@@ -175,7 +175,7 @@ elif st.session_state.page == "eda":
     unsafe_allow_html=True
     )
 
-    df = pd.read_csv('../data/youtube_df_cleaned (3).csv')
+    df = pd.read_csv('../data/youtube_df_cleaned.csv')
 
     eda_type = st.radio("Choose Analysis Type", ["Univariate", "Bivariate"])
 
@@ -183,6 +183,8 @@ elif st.session_state.page == "eda":
     # UNIVARIATE
     # =======================
     if eda_type == "Univariate":
+
+        plt.figure(figsize=(8, 4))  
 
         st.subheader("Distribution of Revenue")
         fig, ax = plt.subplots()
