@@ -90,24 +90,25 @@ The objective of this project is to:
 * Identified that Comment Rate and Watch Time per View introduced noise and  reduced model performance.
 * These features were dropped after experimentatin
 
-Final feature used:
- Engagement Rate (retained due to strong relevance with revenue)
+## **Final feature used:**
+* Engagement Rate (retained due to strong relevance with revenue)
 Transformed features where necessary to improve model learning.
+
 ---
 
 ## **Model Building**
 
 Multiple regression models were experimented with:
 
-Linear Regression
-Ridge Regression
-Lasso Regression
-Random Forest Regressor
-Gradient Boosting Regressor
+* Linear Regression
+* Ridge Regression
+* Lasso Regression
+* Random Forest Regressor
+* Gradient Boosting Regressor
 
 The models were trained and compared to identify the best-performing one.
 
-## **Final Model
+## **Final Model**
 
 * Linear Regression performed best with around 95% R² on both train and test data, and I selected it because it is highly interpretable, allowing me to understand which features influence ad revenue the most.
 
