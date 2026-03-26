@@ -1,70 +1,81 @@
 # YouTube Revenue Predictor
 
-An end-to-end machine learning project that predicts YouTube ad revenue using regression models based on video performance and engagement metrics.
+An end-to-end Machine Learning project that predicts **YouTube ad revenue** using regression models based on video performance and engagement metrics.
 
 ---
 
 ## Project Overview
 
-This project aims to help content creators and media companies estimate potential revenue from YouTube videos. By analyzing performance metrics such as views, likes, comments, and engagement rates, the model predicts expected ad revenue.
+This project helps content creators and media companies estimate potential revenue from YouTube videos.
+By analyzing performance metrics such as views, likes, comments, and engagement rate, the model predicts expected ad revenue.
 
 ---
 
 ## Features
 
 * Exploratory Data Analysis (EDA)
-* Data Cleaning and Preprocessing
+* Data Cleaning & Preprocessing
 * Feature Engineering (e.g., Engagement Rate)
 * Multiple Regression Models
 * Model Evaluation (R², RMSE, MAE)
-* Streamlit Web Application for predictions
+* Interactive Streamlit Dashboard
 
 ---
 
-## Project Structure
+## Streamlit Application
 
-```id="a1b2c3"
-youtube-revenue-predictor/
-│
-├── data/                  # Dataset (CSV file)
-├── notebooks/            # Jupyter notebooks (EDA & Model)
-├── src/                  # Source code (optional)
-├── app/                  # Streamlit application
-├── models/               # Saved ML models
-├── README.md             # Project documentation
-└── requirements.txt      # Dependencies
-```
+The application allows users to:
+
+* Input video performance metrics
+* Predict estimated ad revenue
+* Explore data insights through EDA dashboard
 
 ---
 
-## Dataset Information
+## Dashboard Preview
 
-* Name: YouTube Monetization Modeler
-* Size: ~122,000 rows
-* Target Variable: ad_revenue_usd
-
-### Features:
-
-* Video metrics: views, likes, comments
-* Engagement metrics: watch time, video length
-* Channel metrics: subscribers
-* Contextual features: category, device, country
+## 📸 Dashboard Preview
 
 ---
 
-## Tech Stack
+### 🏠 EDA Dashboard
+![Univariate Dashboard](assets/eda_dashboard_univariate.png)
+![Bivariate Dashboard](assets/eda_dashboard_bivariate.png)
 
-* Python
-* Pandas, NumPy
-* Scikit-learn
-* Matplotlib / Seaborn
-* Streamlit
+---
+
+### 📊 Distribution Analysis
+![Views Distribution](assets/eda_distribution_pf_views.png)
+![Revenue Distribution](assets/eda_distribution_revenue.png)
+
+---
+
+### 📈 Relationship Analysis
+![Views vs Revenue](assets/eda_views_vs_revenue.png)
+![Engagement vs Revenue](assets/eda_engagement_vs_revenue.png)
+![Engagement Rate vs Revenue](assets/eda_engagement_rate_vs_revenue.png)
+![Watch Time vs Revenue](assets/eda_watch_time_vs_revenue.png)
+
+---
+
+### 📦 Statistical Analysis
+![Watch Time Boxplot](assets/eda_watch_time_boxplot.png)
+
+---
+
+### 🔥 Correlation Analysis
+![Correlation Heatmap](assets/eda_correlation_heatmap.png)
+
+---
+
+### 💰 Prediction Page
+![Prediction Page](assets/prediction-page.png)
 
 ---
 
 ## Model Building
 
-Multiple regression models were implemented and compared:
+The following regression models were implemented and compared:
 
 * Linear Regression
 * Decision Tree Regressor
@@ -83,21 +94,33 @@ The best model was selected based on evaluation metrics.
 
 ---
 
-## Streamlit Application
+## Project Structure
 
-The application allows users to:
-
-* Input video performance metrics
-* Predict ad revenue
-* View basic insights
-
-(Currently under development)
+```
+youtube-revenue-predictor/
+│
+├── app/                  # Streamlit application
+│   ├── app.py
+│   ├── model_pipeline.pkl
+│
+├── data/                 # Dataset files
+│   ├── youtube_df_cleaned.csv
+│   ├── youtube_ad_revenue_dataset.csv
+│
+├── notebooks/            # Jupyter notebooks
+│   ├── 01_EDA_and_Feature_Engineering.ipynb
+│   ├── 02_Model_Building_and_Evaluation.ipynb
+│
+├── README.md             # Project documentation
+├── requirements.txt      # Dependencies
+└── .gitignore
+```
 
 ---
 
 ## Installation
 
-```bash id="install01"
+```bash
 git clone https://github.com/your-username/youtube-revenue-predictor.git
 cd youtube-revenue-predictor
 pip install -r requirements.txt
@@ -105,26 +128,48 @@ pip install -r requirements.txt
 
 ---
 
-## Run the Application
+## ▶Run the Application
 
-```bash id="run01"
+```bash
 streamlit run app/app.py
 ```
 
 ---
 
+## Tech Stack
+
+* Python
+* Pandas, NumPy
+* Scikit-learn
+* Matplotlib, Seaborn
+* Streamlit
+
+---
+
 ## Project Status
-The core components such as EDA and feature engineering have been completed. Model development and deployment using Streamlit are in progress.
+
+* ✅ EDA & Feature Engineering completed
+* ✅ Model Building & Evaluation completed
+* ✅ Streamlit Dashboard implemented
+
+---
 
 ## Future Improvements
 
 * Hyperparameter tuning
-* Advanced models such as XGBoost
-* Improved UI/UX for Streamlit
-* Deployment to cloud
+* Advanced models (XGBoost, LightGBM)
+* Enhanced UI/UX for Streamlit
+* Deployment to cloud (Streamlit Cloud / AWS)
+
+---
+
+## Acknowledgements
+
+This project was developed as part of a machine learning learning journey focused on building end-to-end data science solutions.
 
 ---
 
 ## Author
 
-Sangeetha S
+Sangeetha 
+
