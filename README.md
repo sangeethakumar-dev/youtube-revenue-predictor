@@ -69,7 +69,7 @@ The application allows users to:
 ---
 
 ### 💰 Prediction Page
-![Prediction Page](assets/prediction-page.png)
+![Prediction Page](assets/prediction_page.png)
 
 ---
 
