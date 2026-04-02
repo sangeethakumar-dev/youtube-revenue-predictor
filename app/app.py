@@ -121,8 +121,8 @@ if "page" not in st.session_state:
 # =======================
 if st.session_state.page == "home":
 
-    st.markdown('<div class="main-title">Mini Project - 3</div>', unsafe_allow_html=True)
-    st.markdown('<div class="sub-title">Content Monetization Modeler</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-title">YouTube Revenue Predictor</div>', unsafe_allow_html=True)
+    #st.markdown('<div class="sub-title">Content Monetization Modeler</div>', unsafe_allow_html=True)
 
     # 🔽 Dropdown BEFORE logo
     option = st.selectbox("", ["Select", "EDA Visualization", "Prediction"])
