@@ -66,7 +66,13 @@ div[data-baseweb="select"] {
 # =======================
 st.set_page_config(page_title="YouTube Revenue Predictor", layout="centered")
 
-model = joblib.load('model_pipeline.pkl')
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+model_path = os.path.join(BASE_DIR, 'model_pipeline.pkl')
+
+model = joblib.load(model_path)
 
 # =======================
 # 🎨 PREMIUM FONT + STYLE
@@ -175,7 +181,8 @@ elif st.session_state.page == "eda":
     unsafe_allow_html=True
     )
 
-    df = pd.read_csv('../data/youtube_df_cleaned.csv')
+    csv_path = os.path.join(BASE_DIR, 'youtube_df_cleaned.csv')
+    df = pd.read_csv(csv_path)
 
     eda_type = st.radio("Choose Analysis Type", ["Univariate", "Bivariate"])
 
